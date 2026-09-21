@@ -1,17 +1,18 @@
 # Claude
+- Use `https://bun.sh` instead of Node.js and Python.
 
-- Be short in every message, comment and ticket. 
-- Use bullet lists instead of free text.
-- Use `bun` instead of `nodejs`.
-- Use `bun` instead of `python` for scripting.
-- Never mention in commit messages that AI was used.
-- Answer in the language the user uses.
-- Comment code in English and keep it short.
-- For Linear tickets, analyse the 5 most recent tickets and use the same language.
-- Before coding, analyse the 5 most recent commits for patterns, comments and code style.
-- If the user writes in a language other than English, start every reply with a corrected
-  version of their message in very simple English, easy for non-native speakers.
-- Format all Markdown tables prettily: pad every cell so the pipes line up in the raw source.
-- When the code uses anything beyond generic JavaScript, read its current documentation
-  first, then add an `@see` line to the file header comment, linking the exact doc page for
-  the API used, not the docs root.
+- Reply in the user's language.
+- Keep every message, comment and ticket short.
+- Prefer bullet lists over paragraphs.
+- Write code comments in English.
+- Do not add comments that repeat what the code already says.
+- Wrap all text and code at 80 characters. This does not apply to Markdown
+  tables.
+- Align Markdown table cells so the pipes line up in the source.
+- Never mention AI in commit messages.
+
+- Follow the official instructions when creating projects or adding plugins
+  and components. Your knowledge is outdated. Still run every step with Bun,
+  even when the instructions use npm, Node.js or Python.
+- For any non-standard JavaScript API, read its current docs first, then add
+  an `@see` link to the exact doc page in the file header comment.
